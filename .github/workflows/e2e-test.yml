@@ -1,11 +1,6 @@
 name: E2E Tests
 
-on:
-  push:
-    branches: [ "main"  ]
-  schedule:
-    - cron: '0 6 * * *'
-  workflow_dispatch:
+on: [workflow_dispatch]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
